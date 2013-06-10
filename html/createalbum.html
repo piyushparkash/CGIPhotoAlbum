@@ -1,0 +1,22 @@
+<form method="post" class="well" style="text-align:left" action="main.cgi" onsubmit="return checkalbumname()">
+<fieldset>
+    <legend>Create Album</legend>
+    <label>Album name</label>
+    <input type="text" placeholder="Album Name" name="albumname" id="albumname">
+    <span class="help-block">Enter the name of the album</span>
+    <input type="hidden" name="createalbum-action" value="1" />
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+  </form>
+  
+ <script type="text/javascript">
+  function checkalbumname()
+  {
+  	if ($("#albumname").val()=="")
+  	{
+  		alert("Please insert a name in the album");
+  		return false;
+  	}
+  	return true;
+  }
+ </script>

@@ -1,0 +1,90 @@
+\section*{R\-E\-Q\-U\-I\-R\-E\-M\-E\-N\-T\-S\-:}
+
+\begin{DoxyVerb}1) GNU G++ Compiler
+2) Configure public_html and cgi-bin in home
+3) RUDE CGI Library
+4) SQLITE for C++
+\end{DoxyVerb}
+
+
+Installation of requirements
+
+1) G\-N\-U G++ Compiler
+
+Run following command in terminal to install \begin{DoxyVerb}$ sudo apt-get install build-essential
+\end{DoxyVerb}
+
+
+2) Configure public\-\_\-html/cgi-\/bin folder for executing files on browser.\par
+ Assuming you already installed apache if not then run following command in terminal \begin{DoxyVerb}$ sudo apt-get install apache2
+\end{DoxyVerb}
+
+
+{\bfseries Steps to configure public\-\_\-html} \begin{DoxyVerb}$ mkdir ~/public_html
+
+$ sudo a2enmod userdir
+
+$ sudo service apache2 restart
+\end{DoxyVerb}
+
+
+Give 755 permissions to public\-\_\-html directory \begin{DoxyVerb}$ chmod -R 755 ~/public_html
+\end{DoxyVerb}
+
+
+Now open \href{http://localhost/~username}{\tt http\-://localhost/$\sim$username} in browser. Here username is your login name.
+
+{\bfseries Steps to configure cgi-\/bin in public\-\_\-html} \begin{DoxyVerb}$ sudo a2enmod cgi
+
+$ sudo a2enmod cgid
+
+$ sudo service apache2 restart
+
+$ cd ~/public_html
+
+$ mkdir cgi-bin
+
+$ cd /etc/apache2
+
+$ sudo vim sites-available/default
+\end{DoxyVerb}
+
+
+Add following text in file\-: \begin{DoxyVerb}ScriptAlias /cgi-bin/ /home/*/public_html/cgi-bin/
+<Directory "/home/*/public_html/cgi-bin">
+    AllowOverride None
+    Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+    SetHandler cgi-script
+    Order allow,deny
+    Allow from all
+</Directory>
+\end{DoxyVerb}
+
+
+Save it and then restart apache \begin{DoxyVerb}$ sudo service apache2 restart
+\end{DoxyVerb}
+
+
+\section*{Installing R\-U\-D\-E C\-G\-I Library}
+
+Execute the following command to install R\-U\-D\-E C\-G\-I Library \begin{DoxyVerb}$ sudo apt-get install librudecgi5 librudecgi-dev
+\end{DoxyVerb}
+
+
+\section*{Installing S\-Q\-L\-I\-T\-E For C++}
+
+\$ sudo apt-\/get install libsqlite3-\/dev
+
+\section*{A\-U\-T\-H\-O\-R\-S\-:}
+
+{\bfseries Mentor and Manager}
+
+Dr. Hardeep Singh Rai
+
+Website\-: \href{http://gndec.ac.in/~hsrai}{\tt http\-://gndec.\-ac.\-in/$\sim$hsrai}
+
+Piyush Parkash
+
+Website\-: piyushparkash.\-blogspot.\-com
+
+Email\-: achyutapiyush \mbox{[}A\-T\mbox{]} gmail.\-com 

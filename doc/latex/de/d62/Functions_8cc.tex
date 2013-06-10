@@ -1,0 +1,210 @@
+\hypertarget{Functions_8cc}{\section{Functions.\-cc File Reference}
+\label{de/d62/Functions_8cc}\index{Functions.\-cc@{Functions.\-cc}}
+}
+
+
+Definations of all the global functions.  
+
+
+{\ttfamily \#include \char`\"{}Functions.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{Functions_8cc_adb11fa535e04e5361791e2375ed3ed73}{make\-Filename} (int index, string \&file\-Name)
+\begin{DoxyCompactList}\small\item\em This function constructs the name of the file from the filename in the database and the I\-D of the photo. \end{DoxyCompactList}\item 
+void \hyperlink{Functions_8cc_a3f9881b3222c0eb2ba4eaa992037e6e5}{display\-File} (const char $\ast$file\-Name)
+\begin{DoxyCompactList}\small\item\em This function reads the given file and prints its out. \end{DoxyCompactList}\item 
+void \hyperlink{Functions_8cc_a72e73119f0224788462f8efcccd09504}{delete\-Photo} (C\-G\-I cgi, sqlite3 $\ast$db, const char $\ast$id)
+\begin{DoxyCompactList}\small\item\em This function is used to delete photo of the given I\-D. \end{DoxyCompactList}\item 
+void \hyperlink{Functions_8cc_a1dfcb5707f598e46e3a6ca0425f83826}{display\-Album\-Links} (sqlite3 $\ast$db)
+\begin{DoxyCompactList}\small\item\em This function is used to display all the albums present in the database on the main page. \end{DoxyCompactList}\item 
+void \hyperlink{Functions_8cc_a84689613680fb74080c6ea86164b359d}{delete\-Album} (sqlite3 $\ast$db, const char $\ast$id)
+\begin{DoxyCompactList}\small\item\em This function is used to delete an entire \hyperlink{classAlbum}{Album} with all of its photos. \end{DoxyCompactList}\item 
+void \hyperlink{Functions_8cc_abe58f8e919b1b537d6f21b7382ccf069}{display\-Album} (\hyperlink{classMainApp}{Main\-App} app, sqlite3 $\ast$db, C\-G\-I cgi, const char $\ast$id)
+\begin{DoxyCompactList}\small\item\em This function is used to display the \hyperlink{classAlbum}{Album}'s \hyperlink{classPhoto}{Photo}'s.\-This function also uploads images photos to the album. \end{DoxyCompactList}\item 
+void \hyperlink{Functions_8cc_ac555ac0cd099c5d322943a79066cb238}{edit\-Album} (C\-G\-I cgi, sqlite3 $\ast$db)
+\begin{DoxyCompactList}\small\item\em This function is used to edit the name of the \hyperlink{classAlbum}{Album}. \end{DoxyCompactList}\item 
+\hypertarget{Functions_8cc_a42662dc47ec6886db83f4fa886f87e32}{void \hyperlink{Functions_8cc_a42662dc47ec6886db83f4fa886f87e32}{header} ()}\label{de/d62/Functions_8cc_a42662dc47ec6886db83f4fa886f87e32}
+
+\begin{DoxyCompactList}\small\item\em This function outputs the basic header needed for C\-G\-I. \end{DoxyCompactList}\item 
+void \hyperlink{Functions_8cc_a38cd6db9891857f8d00c7727f48dd3f5}{display\-Photo} (sqlite3 $\ast$db, const char $\ast$id, C\-G\-I cgi)
+\begin{DoxyCompactList}\small\item\em This function is used to display a photo. \end{DoxyCompactList}\item 
+\hypertarget{Functions_8cc_ae2ca8f53c188dc1225e83e87bb261b76}{void \hyperlink{Functions_8cc_ae2ca8f53c188dc1225e83e87bb261b76}{create\-Album} ()}\label{de/d62/Functions_8cc_ae2ca8f53c188dc1225e83e87bb261b76}
+
+\begin{DoxyCompactList}\small\item\em This function is used to output the form needed to edit the name of the \hyperlink{classAlbum}{Album}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definations of all the global functions. \begin{DoxyVersion}{Version}
+0.\-1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+Friday 29 March 2013 01\-:46\-:36 I\-S\-T Compiler gcc
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Piyush Parkash, \href{mailto:achyutapiyush@gmail.com}{\tt achyutapiyush@gmail.\-com} License G\-N\-U General Public License 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2013, Great\-Developers \href{https://github.com/GreatDevelopers}{\tt https\-://github.\-com/\-Great\-Developers} 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\hypertarget{Functions_8cc_a84689613680fb74080c6ea86164b359d}{\index{Functions.\-cc@{Functions.\-cc}!delete\-Album@{delete\-Album}}
+\index{delete\-Album@{delete\-Album}!Functions.cc@{Functions.\-cc}}
+\subsubsection[{delete\-Album}]{\setlength{\rightskip}{0pt plus 5cm}void delete\-Album (
+\begin{DoxyParamCaption}
+\item[{sqlite3 $\ast$}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{de/d62/Functions_8cc_a84689613680fb74080c6ea86164b359d}
+
+
+This function is used to delete an entire \hyperlink{classAlbum}{Album} with all of its photos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & The S\-Q\-Lite Connection Handler \\
+\hline
+{\em id} & The I\-D of the album to be deleted \\
+\hline
+\end{DoxyParams}
+\hypertarget{Functions_8cc_a72e73119f0224788462f8efcccd09504}{\index{Functions.\-cc@{Functions.\-cc}!delete\-Photo@{delete\-Photo}}
+\index{delete\-Photo@{delete\-Photo}!Functions.cc@{Functions.\-cc}}
+\subsubsection[{delete\-Photo}]{\setlength{\rightskip}{0pt plus 5cm}void delete\-Photo (
+\begin{DoxyParamCaption}
+\item[{C\-G\-I}]{, }
+\item[{sqlite3 $\ast$}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{de/d62/Functions_8cc_a72e73119f0224788462f8efcccd09504}
+
+
+This function is used to delete photo of the given I\-D. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cgi} & The C\-G\-I parser \\
+\hline
+{\em db} & The S\-Q\-Lite Connection Handler \\
+\hline
+{\em id} & The I\-D of the album to be deleted \\
+\hline
+\end{DoxyParams}
+\hypertarget{Functions_8cc_abe58f8e919b1b537d6f21b7382ccf069}{\index{Functions.\-cc@{Functions.\-cc}!display\-Album@{display\-Album}}
+\index{display\-Album@{display\-Album}!Functions.cc@{Functions.\-cc}}
+\subsubsection[{display\-Album}]{\setlength{\rightskip}{0pt plus 5cm}void display\-Album (
+\begin{DoxyParamCaption}
+\item[{{\bf Main\-App}}]{, }
+\item[{sqlite3 $\ast$}]{, }
+\item[{C\-G\-I}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{de/d62/Functions_8cc_abe58f8e919b1b537d6f21b7382ccf069}
+
+
+This function is used to display the \hyperlink{classAlbum}{Album}'s \hyperlink{classPhoto}{Photo}'s.\-This function also uploads images photos to the album. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & Instance of \hyperlink{classMainApp}{Main\-App} Class \\
+\hline
+{\em db} & The S\-Q\-Lite Connection Handler \\
+\hline
+{\em cgi} & The C\-G\-I Parser \\
+\hline
+{\em id} & The I\-D of the album to be displayed \\
+\hline
+\end{DoxyParams}
+\hypertarget{Functions_8cc_a1dfcb5707f598e46e3a6ca0425f83826}{\index{Functions.\-cc@{Functions.\-cc}!display\-Album\-Links@{display\-Album\-Links}}
+\index{display\-Album\-Links@{display\-Album\-Links}!Functions.cc@{Functions.\-cc}}
+\subsubsection[{display\-Album\-Links}]{\setlength{\rightskip}{0pt plus 5cm}void display\-Album\-Links (
+\begin{DoxyParamCaption}
+\item[{sqlite3 $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{de/d62/Functions_8cc_a1dfcb5707f598e46e3a6ca0425f83826}
+
+
+This function is used to display all the albums present in the database on the main page. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & The S\-Q\-Lite Connection Handler \\
+\hline
+\end{DoxyParams}
+\hypertarget{Functions_8cc_a3f9881b3222c0eb2ba4eaa992037e6e5}{\index{Functions.\-cc@{Functions.\-cc}!display\-File@{display\-File}}
+\index{display\-File@{display\-File}!Functions.cc@{Functions.\-cc}}
+\subsubsection[{display\-File}]{\setlength{\rightskip}{0pt plus 5cm}void display\-File (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{de/d62/Functions_8cc_a3f9881b3222c0eb2ba4eaa992037e6e5}
+
+
+This function reads the given file and prints its out. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\-Name} & The name of the file to be read \\
+\hline
+\end{DoxyParams}
+\hypertarget{Functions_8cc_a38cd6db9891857f8d00c7727f48dd3f5}{\index{Functions.\-cc@{Functions.\-cc}!display\-Photo@{display\-Photo}}
+\index{display\-Photo@{display\-Photo}!Functions.cc@{Functions.\-cc}}
+\subsubsection[{display\-Photo}]{\setlength{\rightskip}{0pt plus 5cm}void display\-Photo (
+\begin{DoxyParamCaption}
+\item[{sqlite3 $\ast$}]{, }
+\item[{const char $\ast$}]{, }
+\item[{C\-G\-I}]{}
+\end{DoxyParamCaption}
+)}}\label{de/d62/Functions_8cc_a38cd6db9891857f8d00c7727f48dd3f5}
+
+
+This function is used to display a photo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & The S\-Q\-Lite Connection Handler \\
+\hline
+{\em id} & The I\-D of the photo to be displayed \\
+\hline
+{\em cgi} & The C\-G\-I Parser \\
+\hline
+\end{DoxyParams}
+\hypertarget{Functions_8cc_ac555ac0cd099c5d322943a79066cb238}{\index{Functions.\-cc@{Functions.\-cc}!edit\-Album@{edit\-Album}}
+\index{edit\-Album@{edit\-Album}!Functions.cc@{Functions.\-cc}}
+\subsubsection[{edit\-Album}]{\setlength{\rightskip}{0pt plus 5cm}void edit\-Album (
+\begin{DoxyParamCaption}
+\item[{C\-G\-I}]{, }
+\item[{sqlite3 $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{de/d62/Functions_8cc_ac555ac0cd099c5d322943a79066cb238}
+
+
+This function is used to edit the name of the \hyperlink{classAlbum}{Album}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cgi} & The C\-G\-I Parser \\
+\hline
+{\em db} & The S\-Q\-Lite Connection Handler \\
+\hline
+\end{DoxyParams}
+\hypertarget{Functions_8cc_adb11fa535e04e5361791e2375ed3ed73}{\index{Functions.\-cc@{Functions.\-cc}!make\-Filename@{make\-Filename}}
+\index{make\-Filename@{make\-Filename}!Functions.cc@{Functions.\-cc}}
+\subsubsection[{make\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}string make\-Filename (
+\begin{DoxyParamCaption}
+\item[{int}]{index, }
+\item[{string \&}]{file\-Name}
+\end{DoxyParamCaption}
+)}}\label{de/d62/Functions_8cc_adb11fa535e04e5361791e2375ed3ed73}
+
+
+This function constructs the name of the file from the filename in the database and the I\-D of the photo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The I\-D of the \hyperlink{classPhoto}{Photo} \\
+\hline
+{\em file\-Name} & The filename of the photo \\
+\hline
+\end{DoxyParams}

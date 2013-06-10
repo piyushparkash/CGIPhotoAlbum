@@ -1,0 +1,2 @@
+Fix Makefile to adapt the new directory structure
+Make tests to test the functions in the library

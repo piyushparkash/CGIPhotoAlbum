@@ -1,0 +1,19 @@
+<form  method="post" enctype="multipart/form-data" class="hide" >
+    <input type="file" name="file" id="file" />
+    <input type="hidden" value="1" name="displayalbum-upload" />
+</form>
+
+<script type="text/javascript">
+	$("#addphoto").click(function()
+	{
+		$("#file").trigger("click");
+	});
+	
+	$("#file").change(function()
+	{	
+		if ($("#file").val()!="")
+		{
+			this.form.submit();
+		}
+	});
+</script>

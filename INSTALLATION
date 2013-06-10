@@ -1,0 +1,16 @@
+Installation steps for using this software
+==========================================
+
+Open the terminal and execute the following commands
+    $ cd public_html/cgi-bin
+
+    $ git clone https://github.com/piyushparkash/CGIPhotoAlbum.git
+
+    $ cd CGIPhotoAlbum
+
+    $ make
+
+NOTE:   Be sure that you must have write permissions in the directory
+        (~/public_html/cgi-bin/CGIPhotoAlbum and ~/public_html).
+        Without permission it won't be able to make changes in the
+        database and you may experience errors.

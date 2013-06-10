@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['deletealbum',['deleteAlbum',['../de/dab/classMainApp.html#aeccd0905b944b037e325f0bf80178703',1,'MainApp::deleteAlbum()'],['../de/d62/Functions_8cc.html#a84689613680fb74080c6ea86164b359d',1,'deleteAlbum(sqlite3 *db, const char *id):&#160;Functions.cc'],['../d8/db9/Functions_8h.html#a76ec004c8e75fcdf1f4f168bef734d29',1,'deleteAlbum(sqlite3 *, const char *):&#160;Functions.cc']]],
+  ['deletephoto',['deletePhoto',['../de/d62/Functions_8cc.html#a72e73119f0224788462f8efcccd09504',1,'deletePhoto(CGI cgi, sqlite3 *db, const char *id):&#160;Functions.cc'],['../d8/db9/Functions_8h.html#ad816f82afd1e44861a85b66f39c03391',1,'deletePhoto(CGI, sqlite3 *, const char *):&#160;Functions.cc']]],
+  ['displayalbum',['displayAlbum',['../de/d62/Functions_8cc.html#abe58f8e919b1b537d6f21b7382ccf069',1,'displayAlbum(MainApp app, sqlite3 *db, CGI cgi, const char *id):&#160;Functions.cc'],['../d8/db9/Functions_8h.html#af7bd8d23f26c67722006d5842e6ad031',1,'displayAlbum(MainApp, sqlite3 *, CGI, const char *):&#160;Functions.cc']]],
+  ['displayalbumlinks',['displayAlbumLinks',['../de/d62/Functions_8cc.html#a1dfcb5707f598e46e3a6ca0425f83826',1,'displayAlbumLinks(sqlite3 *db):&#160;Functions.cc'],['../d8/db9/Functions_8h.html#ac6030c0a77ffe94f45b292a1836a59b7',1,'displayAlbumLinks(sqlite3 *):&#160;Functions.cc']]],
+  ['displayfile',['displayFile',['../de/d62/Functions_8cc.html#a3f9881b3222c0eb2ba4eaa992037e6e5',1,'displayFile(const char *fileName):&#160;Functions.cc'],['../d8/db9/Functions_8h.html#a0dc11ff6e634d1ac9dfe1f46acd5f035',1,'displayFile(const char *):&#160;Functions.cc']]],
+  ['displayphoto',['displayPhoto',['../de/d62/Functions_8cc.html#a38cd6db9891857f8d00c7727f48dd3f5',1,'displayPhoto(sqlite3 *db, const char *id, CGI cgi):&#160;Functions.cc'],['../d8/db9/Functions_8h.html#a7f2ee844b13557a30fe1978cf89c3789',1,'displayPhoto(sqlite3 *, const char *, CGI):&#160;Functions.cc']]]
+];

@@ -1,0 +1,144 @@
+\hypertarget{classMainApp}{\section{Main\-App Class Reference}
+\label{de/dab/classMainApp}\index{Main\-App@{Main\-App}}
+}
+
+
+The is the main class which handles all the functions of the Photo\-Album.  
+
+
+
+
+{\ttfamily \#include $<$Main\-App.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMainApp_afcefd66bc2349987c371ddd0e6a0addd}{Main\-App} (sqlite3 $\ast$)
+\begin{DoxyCompactList}\small\item\em The Constructor of the class. \end{DoxyCompactList}\item 
+int \hyperlink{classMainApp_a4dd4e6d997e6a82c2cf838b1ce8e7ba7}{install\-Database} (sqlite3 $\ast$\hyperlink{classMainApp_a2d0975ce785555e698fb85c697f303bd}{db})
+\begin{DoxyCompactList}\small\item\em This function creates the Table Structure in the Database. \end{DoxyCompactList}\item 
+\hypertarget{classMainApp_a37b5c154528582e649ccdd21ba7fb301}{Album\-List \hyperlink{classMainApp_a37b5c154528582e649ccdd21ba7fb301}{get\-Albums} ()}\label{de/dab/classMainApp_a37b5c154528582e649ccdd21ba7fb301}
+
+\begin{DoxyCompactList}\small\item\em This function return all the albums present in the database. \end{DoxyCompactList}\item 
+\hyperlink{classAlbum}{Album} \hyperlink{classMainApp_afe065eb02ba347ad5a9d786588d22dd7}{get\-Album} (sqlite3 $\ast$, const char $\ast$I\-D)
+\begin{DoxyCompactList}\small\item\em This returns all the information about the \hyperlink{classAlbum}{Album} as the \hyperlink{classAlbum}{Album} structure. \end{DoxyCompactList}\item 
+bool \hyperlink{classMainApp_afc539ec9376c1aad6f32e9351f4b3a8d}{add\-Album} (const char $\ast$)
+\begin{DoxyCompactList}\small\item\em This function is used to create a new \hyperlink{classAlbum}{Album}. \end{DoxyCompactList}\item 
+bool \hyperlink{classMainApp_aeccd0905b944b037e325f0bf80178703}{delete\-Album} (int)
+\begin{DoxyCompactList}\small\item\em This function is used to delete a whole album along with its photos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sqlite3 $\ast$ \hyperlink{classMainApp_a2d0975ce785555e698fb85c697f303bd}{db}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The is the main class which handles all the functions of the Photo\-Album. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sqlite$\ast$} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMainApp_afcefd66bc2349987c371ddd0e6a0addd}{\index{Main\-App@{Main\-App}!Main\-App@{Main\-App}}
+\index{Main\-App@{Main\-App}!MainApp@{Main\-App}}
+\subsubsection[{Main\-App}]{\setlength{\rightskip}{0pt plus 5cm}Main\-App\-::\-Main\-App (
+\begin{DoxyParamCaption}
+\item[{sqlite3 $\ast$}]{con}
+\end{DoxyParamCaption}
+)}}\label{de/dab/classMainApp_afcefd66bc2349987c371ddd0e6a0addd}
+
+
+The Constructor of the class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em con} & The connection handler of S\-Q\-Lite \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMainApp_afc539ec9376c1aad6f32e9351f4b3a8d}{\index{Main\-App@{Main\-App}!add\-Album@{add\-Album}}
+\index{add\-Album@{add\-Album}!MainApp@{Main\-App}}
+\subsubsection[{add\-Album}]{\setlength{\rightskip}{0pt plus 5cm}bool Main\-App\-::add\-Album (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{album\-Name}
+\end{DoxyParamCaption}
+)}}\label{de/dab/classMainApp_afc539ec9376c1aad6f32e9351f4b3a8d}
+
+
+This function is used to create a new \hyperlink{classAlbum}{Album}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em album\-Name} & The name of the \hyperlink{classAlbum}{Album} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMainApp_aeccd0905b944b037e325f0bf80178703}{\index{Main\-App@{Main\-App}!delete\-Album@{delete\-Album}}
+\index{delete\-Album@{delete\-Album}!MainApp@{Main\-App}}
+\subsubsection[{delete\-Album}]{\setlength{\rightskip}{0pt plus 5cm}bool Main\-App\-::delete\-Album (
+\begin{DoxyParamCaption}
+\item[{int}]{album\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{de/dab/classMainApp_aeccd0905b944b037e325f0bf80178703}
+
+
+This function is used to delete a whole album along with its photos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em album\-I\-D} & The I\-D of the album to be deleted \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMainApp_afe065eb02ba347ad5a9d786588d22dd7}{\index{Main\-App@{Main\-App}!get\-Album@{get\-Album}}
+\index{get\-Album@{get\-Album}!MainApp@{Main\-App}}
+\subsubsection[{get\-Album}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Album} Main\-App\-::get\-Album (
+\begin{DoxyParamCaption}
+\item[{sqlite3 $\ast$}]{db, }
+\item[{const char $\ast$}]{I\-D}
+\end{DoxyParamCaption}
+)}}\label{de/dab/classMainApp_afe065eb02ba347ad5a9d786588d22dd7}
+
+
+This returns all the information about the \hyperlink{classAlbum}{Album} as the \hyperlink{classAlbum}{Album} structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & The S\-Q\-Lite Connection handler \\
+\hline
+{\em I\-D} & The I\-D of the A\-Lbum \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMainApp_a4dd4e6d997e6a82c2cf838b1ce8e7ba7}{\index{Main\-App@{Main\-App}!install\-Database@{install\-Database}}
+\index{install\-Database@{install\-Database}!MainApp@{Main\-App}}
+\subsubsection[{install\-Database}]{\setlength{\rightskip}{0pt plus 5cm}int Main\-App\-::install\-Database (
+\begin{DoxyParamCaption}
+\item[{sqlite3 $\ast$}]{db}
+\end{DoxyParamCaption}
+)}}\label{de/dab/classMainApp_a4dd4e6d997e6a82c2cf838b1ce8e7ba7}
+
+
+This function creates the Table Structure in the Database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & The connection handler of S\-Q\-Lite \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classMainApp_a2d0975ce785555e698fb85c697f303bd}{\index{Main\-App@{Main\-App}!db@{db}}
+\index{db@{db}!MainApp@{Main\-App}}
+\subsubsection[{db}]{\setlength{\rightskip}{0pt plus 5cm}sqlite3$\ast$ Main\-App\-::db}}\label{de/dab/classMainApp_a2d0975ce785555e698fb85c697f303bd}
+This will hold the connection to the database 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{MainApp_8h}{Main\-App.\-h}\item 
+\hyperlink{MainApp_8cc}{Main\-App.\-cc}\end{DoxyCompactItemize}

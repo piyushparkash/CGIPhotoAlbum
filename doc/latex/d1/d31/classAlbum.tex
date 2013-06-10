@@ -1,0 +1,96 @@
+\hypertarget{classAlbum}{\section{Album Class Reference}
+\label{d1/d31/classAlbum}\index{Album@{Album}}
+}
+
+
+Class that holds and manipulates albums.  
+
+
+
+
+{\ttfamily \#include $<$Album.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classAlbum_a2b59f90cc3da8dd029485c46c02c161a}{init} (sqlite3 $\ast$db, int album\-I\-D, char $\ast$a\-Name)
+\begin{DoxyCompactList}\small\item\em This functions initializes all the variable used in the class. \end{DoxyCompactList}\item 
+\hypertarget{classAlbum_aac7b24c22383a6a7bd849d765d493696}{{\bfseries Album} (sqlite3 $\ast$db, int album\-I\-D, char $\ast$a\-Name)}\label{d1/d31/classAlbum_aac7b24c22383a6a7bd849d765d493696}
+
+\item 
+\hypertarget{classAlbum_a3543f089d2c4cb0b1fcb034170254e52}{std\-::string \hyperlink{classAlbum_a3543f089d2c4cb0b1fcb034170254e52}{first\-Photo} ()}\label{d1/d31/classAlbum_a3543f089d2c4cb0b1fcb034170254e52}
+
+\begin{DoxyCompactList}\small\item\em This function returns the first photo of the \hyperlink{classAlbum}{Album}. \end{DoxyCompactList}\item 
+\hyperlink{classAlbum_a5442b9cbed3b590e2e1151a9f262dd7a}{Album} ()
+\begin{DoxyCompactList}\small\item\em The constructor of the class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAlbum_a648c43c1dccc1a00873c7d00ea3bb82a}{int {\bfseries id}}\label{d1/d31/classAlbum_a648c43c1dccc1a00873c7d00ea3bb82a}
+
+\item 
+\hypertarget{classAlbum_aeb507f9491e42215e1534b61e5a7fc1d}{Photo\-List {\bfseries photos}}\label{d1/d31/classAlbum_aeb507f9491e42215e1534b61e5a7fc1d}
+
+\item 
+\hypertarget{classAlbum_a0c44ddb69e8024878437dd9925a92774}{char $\ast$ {\bfseries album\-Name}}\label{d1/d31/classAlbum_a0c44ddb69e8024878437dd9925a92774}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that holds and manipulates albums. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classAlbum_a5442b9cbed3b590e2e1151a9f262dd7a}{\index{Album@{Album}!Album@{Album}}
+\index{Album@{Album}!Album@{Album}}
+\subsubsection[{Album}]{\setlength{\rightskip}{0pt plus 5cm}Album\-::\-Album (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d1/d31/classAlbum_a5442b9cbed3b590e2e1151a9f262dd7a}
+
+
+The constructor of the class. 
+
+The empty Constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & The connection handler of S\-Q\-Lite \\
+\hline
+{\em album\-I\-D} & I\-D of the album \\
+\hline
+{\em a\-Name} & Name of the album to hold \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classAlbum_a2b59f90cc3da8dd029485c46c02c161a}{\index{Album@{Album}!init@{init}}
+\index{init@{init}!Album@{Album}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Album\-::init (
+\begin{DoxyParamCaption}
+\item[{sqlite3 $\ast$}]{db, }
+\item[{int}]{album\-I\-D, }
+\item[{char $\ast$}]{a\-Name}
+\end{DoxyParamCaption}
+)}}\label{d1/d31/classAlbum_a2b59f90cc3da8dd029485c46c02c161a}
+
+
+This functions initializes all the variable used in the class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & The S\-Q\-Lite Connection Handler \\
+\hline
+{\em album\-I\-D} & I\-D of the album to hold \\
+\hline
+{\em a\-Name} & Name of the \hyperlink{classAlbum}{Album} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Album_8h}{Album.\-h}\item 
+\hyperlink{Album_8cc}{Album.\-cc}\end{DoxyCompactItemize}
